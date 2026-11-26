@@ -1,8 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
-// Template function to sort any type of array in ascending order
 template <typename T>
 void sortArray(T arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
@@ -15,7 +12,6 @@ void sortArray(T arr[], int n) {
         }
     }
 }
-
 int main() {
     int n;
     if (cin >> n) {
@@ -23,10 +19,7 @@ int main() {
         for (int i = 0; i < n; i++) {
             cin >> a[i];
         }
-
-        // Call our template function
         sortArray(a, n);
-
         cout << "Output:" << endl;
         cout << "Sorted Array:" << endl;
         for (int i = 0; i < n; i++) {
@@ -34,6 +27,5 @@ int main() {
         }
         cout << endl;
     }
-
     return 0;
 }
