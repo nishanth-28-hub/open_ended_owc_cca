@@ -11,7 +11,6 @@ int main() {
             int ans = num / den;
             cout << "Output:" << endl;
             cout << "Result = " << ans << endl;
-
         } catch (const char* msg) {
             cout << "Output:" << endl;
             cout << "Exception: " << msg << endl;
