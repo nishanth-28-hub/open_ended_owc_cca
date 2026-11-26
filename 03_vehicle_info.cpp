@@ -1,9 +1,6 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
-
-// Base class
 class Vehicle {
 protected:
     string brand;
@@ -13,10 +10,8 @@ public:
         brand = b;
         model = m;
     }
-    virtual void displayDetails() = 0; // Virtual function for runtime polymorphism
+    virtual void displayDetails() = 0; 
 };
-
-// Car child class
 class Car : public Vehicle {
 public:
     Car(string b, string m) : Vehicle(b, m) {}
@@ -28,8 +23,6 @@ public:
         cout << "Model: " << model << endl;
     }
 };
-
-// Bike child class
 class Bike : public Vehicle {
 public:
     Bike(string b, string m) : Vehicle(b, m) {}
@@ -41,12 +34,9 @@ public:
         cout << "Model: " << model << endl;
     }
 };
-
-// Bus child class
 class Bus : public Vehicle {
 public:
     Bus(string b, string m) : Vehicle(b, m) {}
-
     void displayDetails() {
         cout << "Output:" << endl;
         cout << "Vehicle: Bus" << endl;
@@ -54,14 +44,10 @@ public:
         cout << "Model: " << model << endl;
     }
 };
-
 int main() {
     string type, word;
     string brandName = "", modelName = "";
-
     cin >> type;
-
-    // Handles inputs like: Brand = Honda \n Model = Shine
     while (cin >> word) {
         if (word == "=") {
             if (brandName == "") cin >> brandName;
@@ -77,9 +63,7 @@ int main() {
             }
         }
     }
-
     Vehicle* v = nullptr;
-
     if (type == "Bike") v = new Bike(brandName, modelName);
     else if (type == "Car") v = new Car(brandName, modelName);
     else if (type == "Bus") v = new Bus(brandName, modelName);
