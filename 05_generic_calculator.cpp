@@ -1,8 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
-// Generic calculator class template
 template <typename T>
 class Calculator {
     T a, b;
@@ -11,7 +8,6 @@ public:
         a = val1;
         b = val2;
     }
-
     void calculateAndShow() {
         cout << "Output:" << endl;
         cout << "Addition = " << (a + b)
@@ -20,7 +16,6 @@ public:
              << " , Division = " << (a / b) << endl;
     }
 };
-
 int main() {
     int num1, num2;
     if (cin >> num1 >> num2) {
