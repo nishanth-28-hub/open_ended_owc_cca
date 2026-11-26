@@ -3,7 +3,7 @@
 using namespace std;
 class Employee {
 public:
-    virtual void calculateSalary() = 0; // Pure virtual function
+    virtual void calculateSalary() = 0; 
 };
 class Developer : public Employee {
     double basic;
